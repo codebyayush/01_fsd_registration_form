@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Form</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav
+        class="italic text-emerald-900 shadow-950 underline text-center text-3xl p-4 bg-gradient-to-r from-emerald-300 hover:border-dashed to-zinc-300 cursor-pointer border-4 border-emerald-600 shadow-2xl font-extrabold"
+      >
+        CUSTOMER-REGISTRATION
+      </nav>
+    </header>
+    <!-- main section -->
+    <main
+      class="screen-max-9:flex-col screen-max-9:justify-center screen-max-9:w-full screen-max-9:h-auto gap-5 h-screen flex pt-12 p-12 bg-gradient-to-r from-emerald-200 via-emerald-300 to-emerald-200"
+    >
+      <!-- form section -->
+      <form
+        action="#"
+        class="screen-max-9:border-2 hover:border-dashed screen-max-9:min-w-80 screen-max-9:w-auto rounded-md border-2 border-gray-700 shadow-2xl flex flex-col w-1/2 h-3/4 p-5"
+        id="form-id"
+        >
+        <h1
+          class="text-center text-2xl pb-9 underline font-bold text-emerald-900"
+        >
+          ENTER-DETAILS
+        </h1>
+
+        <label for="name" class="font-medium text-gray-600 text-lg"
+          >Customer Name:</label
+        >
+        <input
+          class="rounded-md border-2 p-1 text-md pl-2 text-gray-600 border-gray-500 text-lg"
+          type="text"
+          id="name"
+          class="text"
+          required
+        />
+        <br />
+        <label for="id" class="font-medium text-gray-600 text-lg"
+          >Customer ID:</label
+        >
+        <input
+          class="rounded-md border-2 p-1 text-md pl-2 text-gray-600 border-gray-500 text-lg"
+          type="number"
+          min="0"
+          id="id"
+          class="text"
+          required
+        />
+        <br />
+        <label for="email" class="font-medium text-gray-600 text-lg"
+          >Email:</label
+        >
+        <input
+          class="rounded-md border-2 p-1 text-md pl-2 text-gray-600 border-gray-500 text-lg"
+          type="email"
+          class="email"
+          id="email"
+          required
+        />
+        <br />
+        <label for="number" class="font-medium text-gray-600 text-lg"
+          >Phone Number:</label
+        >
+        <input
+          class="rounded-md border-2 p-1 text-md pl-2 text-gray-600 border-gray-500 text-lg"
+          type="number"
+          id="phone"
+          min="0"
+          required
+        />
+        <br />
+        <button
+          type="submit"
+          class="hover:bg-emerald-900 hover:shadow-2xl bg-emerald-600 shadow-sm text-white w-full rounded-md p-2 font-medium"
+          >
+          ADD CUSTOMER
+        </button>
+      </form>
+
+      <!-- list section -->
+      <section
+        class="screen-max-9:w-auto screen-max-9:min-w-80 rounded-md border-2 hover:border-dashed border-gray-700 shadow-2xl w-1/2 h-3/4 overflow-y-scroll p-5"
+      >
+        <article>
+          <h1
+            class="text-center text-2xl pb-9 underline font-bold text-emerald-900"
+          >
+            CUSTOMER-LIST
+          </h1>
+
+          <!-- created a table to organise customer list -->
+          <table
+            class="table-auto w-full border-collapse border border-emerald-900 font-medium text-emerald-900"
+          >
+          <!-- here we'll be having all the information of user & Actions will have the reset & delete button -->
+            <thead>
+              <tr >
+                <th class="border border-emerald-900 px-4 py-2 hover:underline cursor-pointer">Name</th>
+                <th class="border border-emerald-900 px-4 py-2 hover:underline cursor-pointer">Id</th>
+                <th class="border border-emerald-900 px-4 py-2 hover:underline cursor-pointer">Email</th>
+                <th class="border border-emerald-900 px-4 py-2 hover:underline cursor-pointer">Phone</th>
+                <th class="border border-emerald-900 px-4 py-2 hover:underline cursor-pointer">Actions</th>
+              </tr>
+            </thead>
+
+            <!-- we'll get all the table elements inside of this table body from main.js on submit -->
+            <tbody id="tbody">
+                <!-- list starts here -->
+              <!-- <tr id="trow">
+                <td class="border border-emerald-900 px-4 py-2">Ram</td>
+                <td class="border border-emerald-900 px-4 py-2">1</td>
+                <td class="border border-emerald-900 px-4 py-2">ram@gmail.com</td>
+                <td class="border border-emerald-900 px-4 py-2">9993805592</td>
+                <td class="border border-emerald-900 px-4 py-2">
+                  <button class="mr-2 p-1 rounded-md bg-emerald-600 text-white">
+                    Reset
+                  </button>
+                  <button class="p-1 rounded-md bg-red-600 text-white">
+                    Delete
+                  </button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
